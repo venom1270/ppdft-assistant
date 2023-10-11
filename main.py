@@ -30,6 +30,6 @@ async def vprasaj_asistenta(query = "", model = "gpt-3.5-turbo", temperature = 0
     if query is None or query == "":
         query = DEFAULT_QUERY
 
-    (response, sources) = run_query(query, temperature, k, model)
+    (response, sources) = run_query(query, temperature, int(k), model)
 
     return {"response": response, "sources": sources}
