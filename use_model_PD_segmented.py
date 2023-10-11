@@ -32,7 +32,7 @@ def run_query(user_query, temperature = 0, k = 1, model = "gpt-3.5-turbo"):
     #(3) Prikrivanje kaznivega izvora denarja ali premoženja."""
 
     # retriever = vecotrdb.as_retriever()
-    retriever = vecotrdb.as_retriever(search_kwargs={"k": 1})
+    retriever = vecotrdb.as_retriever(search_kwargs={"k": k})
     docs = retriever.get_relevant_documents(user_query)
     print(len(docs))
     for doc in docs:
