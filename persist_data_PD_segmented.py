@@ -12,9 +12,6 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-os.environ["OPENAI_API_KEY"] = "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"
-
-
 print("Loading documents...")
 loader = DirectoryLoader("docs/pranje_denarja_segmented", glob="**/*.txt")
 doc = loader.load()

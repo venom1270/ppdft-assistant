@@ -9,8 +9,6 @@ from langchain.document_loaders import DirectoryLoader
 
 
 def run_query(user_query, temperature = 0, k = 1, model = "gpt-3.5-turbo"):
-    os.environ["OPENAI_API_KEY"] = "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"
-
     persist_directory = "db_PD_segmented"
     embedding = OpenAIEmbeddings()
 
